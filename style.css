@@ -1,0 +1,9 @@
+.box {
+    margin: 15%;
+    text-align: center;
+    padding: 10%;
+}
+
+.hide {
+    display: none;
+}
