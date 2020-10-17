@@ -30,6 +30,7 @@ backBtnEl.addEventListener("click", function (event) {
 });
 
 var Image1 = $("<img>");
+Image1.attr("id", "btn");
 var Image2 = $("<img>");
 var Image3 = $("<img>");
 var Image4 = $("<img>");
