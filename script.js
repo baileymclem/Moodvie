@@ -14,7 +14,7 @@ var backBtnEl = document.querySelector("#back-btn");
 //Events
 startBtnEl.addEventListener("click", function (event) {
   introContainerEl.classList.add("hide");
-  choicesContaine0rEl.classList.remove("hide");
+  choicesContainerEl.classList.remove("hide");
 });
 
 

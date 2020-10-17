@@ -31,8 +31,21 @@ html {
 
 .image {
     padding: 1px;
-
 }
+#image1 {
+    float: right ;
+}
+#image2 {
+    float: right;
+}
+#image3 {
+    float: right;
+}
+#image4 {
+    float: right;
+}
+
+
 /* .column {
     width: 25%;
 } */
