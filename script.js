@@ -1,8 +1,8 @@
 //Containers
-var introContainerEl = document.querySelector(".intro");
-var choicesContainerEl = document.querySelector(".choices");
-var listContainerEl = document.querySelector(".list");
-var trailerContainerEl = document.querySelector(".trailer");
+var introContainerEl = document.querySelector("#intro");
+var choicesContainerEl = document.querySelector("#choices");
+var listContainerEl = document.querySelector("#list");
+var trailerContainerEl = document.querySelector("#trailer");
 
 //Buttons
 var startBtnEl = document.querySelector("#start-btn1");
@@ -30,6 +30,7 @@ backBtnEl.addEventListener("click", function (event) {
 });
 
 var Image1 = $("<img>");
+Image1.attr("id", "btn");
 var Image2 = $("<img>");
 var Image3 = $("<img>");
 var Image4 = $("<img>");
