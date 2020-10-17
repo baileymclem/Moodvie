@@ -6,36 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moodvie</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<section class="hero is-primary">
+<section class="hero is-danger">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
-                <a href="Moodie.html">MOODVIE</a>
+                <a class="link" href="Moodie.html">MOODVIE</a>
             </h1>
             <h2 class="subtitle">
-                Primary subtitle
+                What's Your Moodvie? 
             </h2>
         </div>
     </div>
 </section>
 
 <div class="box intro">
-    <h1 class="title">MOOOODVIE</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid aspernatur laboriosam enim repudiandae. Hic, reprehenderit. Quos, in quod suscipit sunt, nam illum autem hic, nobis est cupiditate ipsam adipisci?</p>
+    <h1 class="title">Welcome to Moodvie!</h1>
+    <p>The app that uses your mood to pick your next movie or television show </p>
     <br/><br/>
-    <button class="button is-primary is-focused" id="start-btn">What's Your Moodvie?</button>
+    <button class="button is-danger is-focused" id="start-btn1">What's Your Moodvie?</button>
 </div>
 
 <div class="box choices hide">
     <h1>Choose Your Destiny</h1>
-    <div id="images">
-        EMOJIS HERE - :)
+    <div class="container">
+        <div class="column" id="image1"></div>
+        <div class="column" id="image2"></div>
+        <div class="column" id="image3"></div>
+        <div class="column" id="image4"></div>
     </div>
-    <button class="button is-primary is-focused" id="emoji-btn">I Choose You!</button>
+    <!-- <div id="image1" class="image">
+    </div>
+    <div id="image2" class="image">
+    </div>
+    <div id="image3" class="image">
+    </div>
+    <div id="image4" class="image">
+    </div> -->
+    <button class="button is-danger is-focused" id="start-btn2">I Choose You!</button>
 </div>
 
 <div class="box list hide">
@@ -43,7 +56,7 @@
     <div>
         Movie list here!
     </div>
-    <button class="button is-primary is-focused" id="movie-btn">Watch Trailer</button>
+    <button class="button is-danger is-focused" id="movie-btn">Watch Trailer</button>
 </div>
 
 <div class="box trailer hide">
@@ -51,7 +64,7 @@
     <div>
         What trailer here!
     </div>
-    <button class="button is-primary is-focused" id="back-btn">Start Over</button>
+    <button class="button is-danger is-focused" id="back-btn">Start Over</button>
 </div>
 
 

@@ -5,10 +5,11 @@ var listContainerEl = document.querySelector(".list");
 var trailerContainerEl = document.querySelector(".trailer");
 
 //Buttons
-var startBtnEl = document.querySelector("#start-btn");
-var emojiBtnEl = document.querySelector("#emoji-btn");
+var startBtnEl = document.querySelector("#start-btn1");
+var emojiBtnEl = document.querySelector("#start-btn2");
 var movieBtnEl = document.querySelector("#movie-btn");
 var backBtnEl = document.querySelector("#back-btn");
+
 
 //Events
 startBtnEl.addEventListener("click", function(event) {
@@ -16,10 +17,7 @@ startBtnEl.addEventListener("click", function(event) {
 	choicesContainerEl.classList.remove("hide");
 });
 
-emojiBtnEl.addEventListener("click", function(event) {
-    choicesContainerEl.classList.add("hide");
-    listContainerEl.classList.remove("hide");
-});
+
 
 movieBtnEl.addEventListener("click", function(event) {
     listContainerEl.classList.add("hide");
@@ -31,7 +29,9 @@ backBtnEl.addEventListener("click", function(event) {
     choicesContainerEl.classList.remove("hide");
 });
 
-$("#start-btn").on("click", function() {
+var Image1 = $("<img>");
+
+$("#start-btn1").on("click", function() {
 
     //api endpoint url with api key
     var queryURL1 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
@@ -46,15 +46,16 @@ $("#start-btn").on("click", function() {
     //handling the response, as a javascript object (this is where the "call back" happen)
       .then(function(response) {
       //get the image url from the response
+        console.log(response);
         var imageUrl = response.data.fixed_width_small_url;
         //creating a new image element
-        var Image1 = $("<img>");
+        //var Image1 = $("<img>");
         //applying the data from the server to make the image in html
         Image1.attr("src", imageUrl);
         Image1.attr("alt", "moviegif1");
-        Image1.attr("class", "btn");
+        Image1.attr("id", "btn");
         //prepends new img to the HTML
-        $("#images").prepend(Image1);
+        $("#image1").prepend(Image1);
       });
       $.ajax({
         url: queryURL2,
@@ -69,9 +70,9 @@ $("#start-btn").on("click", function() {
           //applying the data from the server to make the image in html
           Image2.attr("src", imageUrl);
           Image2.attr("alt", "moviegif2");
-          Image2.attr("class", "btn");
+          Image2.attr("id", "btn");
           //prepends new img to the HTML
-          $("#images").prepend(Image2);
+          $("#image2").prepend(Image2);
         });
       $.ajax({
         url: queryURL3,
@@ -85,9 +86,9 @@ $("#start-btn").on("click", function() {
           //applying the data from the server to make the image in html
           Image3.attr("src", imageUrl);
           Image3.attr("alt", "moviegif3");
-          Image3.attr("class", "btn");
+          Image3.attr("id", "btn");
           //prepends new img to the HTML
-          $("#images").prepend(Image3);
+          $("#image3").prepend(Image3);
         });
       $.ajax({
         url: queryURL4,
@@ -101,8 +102,35 @@ $("#start-btn").on("click", function() {
           //applying the data from the server to make the image in html
           Image4.attr("src", imageUrl);
           Image4.attr("alt", "moviegif4");
-          Image4.attr("class", "btn");
+          Image4.attr("id", "btn");
           //prepends new img to the HTML
-          $("#images").prepend(Image4);
+          $("#image4").prepend(Image4);
         });
+
+});
+
+$("#start-btn2").on("click", function() {
+  var queryURL1 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
+  $.ajax({
+    url: queryURL1,
+    method: "GET" //http method 
+  })
+  //handling the response, as a javascript object (this is where the "call back" happen)
+    .then(function(response) {
+    //get the image url from the response
+      console.log(response);
+      var imageUrl = response.data.fixed_width_small_url;
+      //creating a new image element
+      //var Image1 = $("<img>");
+      //applying the data from the server to make the image in html
+      Image1.attr("src", imageUrl);
+      Image1.attr("alt", "moviegif1");
+      Image1.attr("id", "btn");
+      //prepends new img to the HTML
+      $("#image1").prepend(Image1);
     });
+})
+
+$("#btn").on("click", function() {
+  console.log("I have been clicked");
+})

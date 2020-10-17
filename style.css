@@ -1,5 +1,12 @@
+html { 
+    background: url(popcorn.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 .box {
-    margin: 15%;
+    margin: 100px 500px 350px 500px;
     text-align: center;
     padding: 10%;
 }
@@ -7,3 +14,25 @@
 .hide {
     display: none;
 }
+
+.title {
+    font-family: 'Paytone One', sans-serif;
+}
+
+.subtitle {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px; 
+    color: black;
+}
+
+.link {
+    color: black;
+}
+
+.image {
+    padding: 1px;
+
+}
+/* .column {
+    width: 25%;
+} */
