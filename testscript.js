@@ -10,7 +10,9 @@ $(document).ready(function(){
         e.preventDefault();
 
 
-        var genreIdArr = {}
+        var genreIdArr = [{
+            
+        }]
         var movieGenre = $('#movieGenreText').val().trim(); 
 
         console.log('movieGenre', movieGenre)
