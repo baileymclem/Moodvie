@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<section class="hero is-danger">
+<section class="hero is-danger is-mobile">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -25,16 +25,28 @@
     </div>
 </section>
 
-<div class="box intro">
+
+<div class="container is-flex">
+
+<div class="box center column  is-10 is-offset-1 is-flex-mobile">
+    
     <h1 class="title">Welcome to Moodvie!</h1>
-    <p>Hey there! How are you today? How are you feeling? Need to Netflix and chill or Hulu and Woohoo but can't be bothered with the never-ending scrolling through choices? So. Many. Choices. Let Moodvie find you something to watch that's a mood. It'll be great. You'll love it. </p>
+    <p>Hey there! How are you today? How are you feeling? Need to Netflix and chill or Hulu and Woohoo but can't be bothered with the never-ending scrolling through choices? We understand, it can be overwhelming, there's a lot of options out there. Moodvie is here to help. We'll help you find something to watch that's a mood.</p>
+    <p>It'll be great. You'll love it. </p>
     <br/><br/>
     <button class="button is-danger is-focused" id="start-btn">What's Your Moodvie?</button>
-</div>
+    </div>
+
 
 <div class="box choices hide">
     <h1>Whatcha Feelin'?</h1>
-    <div id="images">
+    <div id="image1">
+    </div>
+    <div id="image2">
+    </div>
+    <div id="image3">
+    </div>
+    <div id="image4">
     </div>
     <button class="button is-danger is-focused" id="emoji-btn">I Choose You!</button>
 </div>
@@ -55,7 +67,7 @@
     <button class="button is-danger is-focused" id="back-btn">Start Over</button>
 </div>
 
-
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
