@@ -1,8 +1,8 @@
 //Containers
-var introContainerEl = document.querySelector(".intro");
-var choicesContainerEl = document.querySelector(".choices");
-var listContainerEl = document.querySelector(".list");
-var trailerContainerEl = document.querySelector(".trailer");
+var introContainerEl = document.querySelector("#intro");
+var choicesContainerEl = document.querySelector("#choices");
+var listContainerEl = document.querySelector("#list");
+var trailerContainerEl = document.querySelector("#trailer");
 
 //Buttons
 var startBtnEl = document.querySelector("#start-btn1");
