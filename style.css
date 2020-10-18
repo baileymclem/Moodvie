@@ -5,21 +5,10 @@ html {
     -o-background-size: cover;
     background-size: cover;
   }
-<<<<<<< HEAD
-.box {
-<<<<<<< HEAD
-    margin: 100px;
-=======
-    margin: 100px 500px 350px 500px;
->>>>>>> Develop
-    text-align: center;
-    padding: 10px;
-=======
 .section {
     margin: 10%;
     text-align: center;
     
->>>>>>> Develop
 }
 
 .hide {

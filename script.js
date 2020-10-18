@@ -30,7 +30,6 @@ backBtnEl.addEventListener("click", function (event) {
 });
 
 var Image1 = $("<img>");
-Image1.attr("id", "btn");
 var Image2 = $("<img>");
 var Image3 = $("<img>");
 var Image4 = $("<img>");
@@ -50,7 +49,6 @@ $("#start-btn1").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -122,7 +120,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -141,7 +138,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -160,7 +156,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -179,7 +174,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image4 = $("<img>");
@@ -192,6 +186,117 @@ $("#start-btn2").on("click", function () {
     });
 })
 
-$("#btn").on("click", function () {
+$(".btn2").on("click", function (event) {
   console.log("I have been clicked");
+  choicesContainerEl.classList.add("hide");
+  listContainerEl.classList.remove("hide");
+  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&api_key=" + apiKey;
+
+
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+
+    for (i = 0; i < 10;) {
+      var movieLi = $("<li>");
+      var romResults = response.results[i].title.split();
+      //console.log("results", romResults);
+      $(movieLi).append(romResults);
+      $("#movie-list").prepend(movieLi);
+      i++
+    }
+    console.log("results", romResults);
+
+  });
+
+})
+
+$(".btn3").on("click", function (event) {
+  console.log("I have been clicked");
+  choicesContainerEl.classList.add("hide");
+  listContainerEl.classList.remove("hide");
+  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" + apiKey;
+
+
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+
+    for (i = 0; i < 10;) {
+      var movieLi = $("<li>");
+      var horResults = response.results[i].title.split();
+      $(movieLi).append(horResults);
+      $("#movie-list").prepend(movieLi);
+      i++
+    }
+
+  });
+
+})
+
+$(".btn1").on("click", function (event) {
+  console.log("I have been clicked");
+  choicesContainerEl.classList.add("hide");
+  listContainerEl.classList.remove("hide");
+  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=35&sort_by=popularity.desc&api_key=" + apiKey;
+
+
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+
+    for (i = 0; i < 10;) {
+      var movieLi = $("<li>");
+      var comResults = response.results[i].title.split();
+      $(movieLi).append(comResults);
+      $("#movie-list").prepend(movieLi);
+      i++
+    }
+
+  });
+
+})
+
+$(".btn4").on("click", function (event) {
+  console.log("I have been clicked");
+  choicesContainerEl.classList.add("hide");
+  listContainerEl.classList.remove("hide");
+  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=28&sort_by=popularity.desc&api_key=" + apiKey;
+
+
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (response) {
+
+    for (i = 0; i < 10;) {
+      var movieLi = $("<li>");
+      var actResults = response.results[i].title.split();
+
+      var link = document.createElement('a');
+      link.href = 
+      link.click();
+
+      $(movieLi).append(actResults);
+      $("#movie-list").prepend(movieLi);
+      i++
+    }
+
+  });
+
 })
