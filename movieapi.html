@@ -16,7 +16,9 @@
     <button id="btn-act">Action</button>
   </div>
 
-  <div id="movie-results"></div>
+  <ul id="movie-results">
+    
+  </ul>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
@@ -33,13 +35,16 @@
         url: queryURL,
         method: "GET"
       }).then(function (response) {
-        console.log(response);
+        
         for (i=0; i < 10; ){
-          var romResults = response.results[i].title;
-          $("#movie-results").prepend(romResults);
+          var movieLi = $("<li>");
+          var romResults = response.results[i].title.split();
+          console.log("results", romResults);
+          $(movieLi).append(romResults);
+          $("#movie-results").prepend(movieLi);
           i++
         }
-        
+        console.log("results", romResults);
         
       });
 
@@ -59,8 +64,10 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
   for (i=0; i < 10; ){
-    var horResults = response.results[i].title;
-    $("#movie-results").prepend(horResults);
+    var movieLi = $("<li>");
+    var horResults = response.results[i].title.split();
+    $(movieLi).append(horResults);
+    $("#movie-results").prepend(movieLi);
     i++
   }
   
@@ -82,8 +89,10 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
   for (i=0; i < 10; ){
-    var comResults = response.results[i].title;
-    $("#movie-results").prepend(comResults);
+    var movieLi = $("<li>");
+    var comResults = response.results[i].title.split();
+    $(movieLi).append(comResults);
+    $("#movie-results").prepend(movieLi);
     i++
   }
   
@@ -97,27 +106,7 @@ var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
 
 var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=28&sort_by=popularity.desc&api_key=" + apiKey;
 
-$("#btn-hor").on("click", function (event) {
-        var apiKey = "44edc45cf343e4f63c0b65f4586bf3a6";
 
-        var queryURL =
-          "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" +
-          apiKey;
-
-        $("div").empty();
-
-        $.ajax({
-          url: queryURL,
-          method: "GET",
-        }).then(function (response) {
-          console.log(response);
-          for (i = 0; i < 10; ) {
-            var horResults = response.results[i].title;
-            $("#movie-results").prepend(horResults);
-            i++;
-          }
-        });
-      });
 
 $.ajax({
   url: queryURL,
@@ -125,8 +114,10 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
   for (i=0; i < 10; ){
-    var actResults = response.results[i].title;
-    $("#movie-results").prepend(actResults);
+    var movieLi = $("<li>");
+    var actResults = response.results[i].title.split();
+    $(movieLi).append(actResults);
+    $("#movie-results").prepend(movieLi);
     i++
   }
   
