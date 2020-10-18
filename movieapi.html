@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <button id="btn-rom">Romance</button>
+    <button id="btn-hor">Horror</button>
+    <button id="btn-com">Comedy</button>
+    <button id="btn-act">Action</button>
+  </div>
+
+  <ul id="movie-results">
+    
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $("#btn-rom").on("click", function (event) {
+
+      var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+      var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&api_key=" + apiKey;
+
+      $("div").empty();
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+        
+        for (i=0; i < 10; ){
+          var movieLi = $("<li>");
+          var romResults = response.results[i].title.split();
+          console.log("results", romResults);
+          $(movieLi).append(romResults);
+          $("#movie-results").prepend(movieLi);
+          i++
+        }
+        console.log("results", romResults);
+        
+      });
+
+    })
+
+    $("#btn-hor").on("click", function (event) {
+
+var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" + apiKey;
+
+$("div").empty();
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+  for (i=0; i < 10; ){
+    var movieLi = $("<li>");
+    var horResults = response.results[i].title.split();
+    $(movieLi).append(horResults);
+    $("#movie-results").prepend(movieLi);
+    i++
+  }
+  
+  
+});
+})
+
+$("#btn-com").on("click", function (event) {
+
+var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=35&sort_by=popularity.desc&api_key=" + apiKey;
+
+$("div").empty();
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+  for (i=0; i < 10; ){
+    var movieLi = $("<li>");
+    var comResults = response.results[i].title.split();
+    $(movieLi).append(comResults);
+    $("#movie-results").prepend(movieLi);
+    i++
+  }
+  
+  
+});
+})
+
+$("#btn-act").on("click", function (event) {
+
+var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=28&sort_by=popularity.desc&api_key=" + apiKey;
+
+
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+  for (i=0; i < 10; ){
+    var movieLi = $("<li>");
+    var actResults = response.results[i].title.split();
+    $(movieLi).append(actResults);
+    $("#movie-results").prepend(movieLi);
+    i++
+  }
+  
+  
+});
+})
+
+  </script>
+</body>
+
+</html>
