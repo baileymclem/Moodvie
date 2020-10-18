@@ -10,10 +10,10 @@
 <body>
 
   <div class="container">
-    <button id="btn">Romance</button>
-    <button id="btn">Horror</button>
-    <button id="btn">Comedy</button>
-    <button id="btn">Action</button>
+    <button id="btn-rom">Romance</button>
+    <button id="btn-hor">Horror</button>
+    <button id="btn-com">Comedy</button>
+    <button id="btn-act">Action</button>
   </div>
 
   <div id="movie-results"></div>
@@ -21,16 +21,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
 
-    $("button").on("click", function (event) {
-
-
-
-      var index = 0;
-      var genreArr = [10749, 27, 35, 28];
+    $("#btn-rom").on("click", function (event) {
 
       var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
 
-      var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=" + genreArr[index] + "&sort_by=popularity.desc&api_key=" + apiKey;
+      var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&api_key=" + apiKey;
+
+      $("div").empty();
 
       $.ajax({
         url: queryURL,
@@ -38,14 +35,104 @@
       }).then(function (response) {
         console.log(response);
         for (i=0; i < 10; ){
-          var movie1 = response.results[i].title;
-          $("#movie-results").prepend(movie1);
+          var romResults = response.results[i].title;
+          $("#movie-results").prepend(romResults);
           i++
         }
         
         
       });
+
     })
+
+    $("#btn-hor").on("click", function (event) {
+
+var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" + apiKey;
+
+$("div").empty();
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+  for (i=0; i < 10; ){
+    var horResults = response.results[i].title;
+    $("#movie-results").prepend(horResults);
+    i++
+  }
+  
+  
+});
+})
+
+$("#btn-com").on("click", function (event) {
+
+var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=35&sort_by=popularity.desc&api_key=" + apiKey;
+
+$("div").empty();
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+  for (i=0; i < 10; ){
+    var comResults = response.results[i].title;
+    $("#movie-results").prepend(comResults);
+    i++
+  }
+  
+  
+});
+})
+
+$("#btn-act").on("click", function (event) {
+
+var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+
+var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=28&sort_by=popularity.desc&api_key=" + apiKey;
+
+$("#btn-hor").on("click", function (event) {
+        var apiKey = "44edc45cf343e4f63c0b65f4586bf3a6";
+
+        var queryURL =
+          "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" +
+          apiKey;
+
+        $("div").empty();
+
+        $.ajax({
+          url: queryURL,
+          method: "GET",
+        }).then(function (response) {
+          console.log(response);
+          for (i = 0; i < 10; ) {
+            var horResults = response.results[i].title;
+            $("#movie-results").prepend(horResults);
+            i++;
+          }
+        });
+      });
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function (response) {
+  console.log(response);
+  for (i=0; i < 10; ){
+    var actResults = response.results[i].title;
+    $("#movie-results").prepend(actResults);
+    i++
+  }
+  
+  
+});
+})
 
   </script>
 </body>
