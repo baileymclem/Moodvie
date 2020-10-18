@@ -30,7 +30,6 @@ backBtnEl.addEventListener("click", function (event) {
 });
 
 var Image1 = $("<img>");
-Image1.attr("id", "btn");
 var Image2 = $("<img>");
 var Image3 = $("<img>");
 var Image4 = $("<img>");
@@ -50,7 +49,6 @@ $("#start-btn1").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -122,7 +120,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -141,7 +138,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -160,7 +156,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image1 = $("<img>");
@@ -179,7 +174,6 @@ $("#start-btn2").on("click", function () {
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
       //get the image url from the response
-      console.log(response);
       var imageUrl = response.data.fixed_width_small_url;
       //creating a new image element
       //var Image4 = $("<img>");
@@ -192,6 +186,8 @@ $("#start-btn2").on("click", function () {
     });
 })
 
-$("#btn").on("click", function () {
+$(".btn").on("click", function () {
   console.log("I have been clicked");
+  choicesContainerEl.classList.add("hide");
+  listContainerEl.classList.remove("hide");
 })
