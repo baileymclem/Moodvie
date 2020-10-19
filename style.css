@@ -25,6 +25,11 @@ html {
     color: black;
 }
 
+#start-btn2 {
+    position: bottom;
+    bottom: 0;
+}
+
 .link {
     color: black;
 }
@@ -44,9 +49,4 @@ html {
 #image4 {
     float: right;
 }
-
-
-
-/* .column {
-    width: 25%;
-} */
+ 
