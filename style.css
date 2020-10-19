@@ -25,9 +25,8 @@ html {
     color: black;
 }
 
-#start-btn2 {
-    position: bottom;
-    bottom: 0;
+.align-bottom {
+    align-self: flex-end;
 }
 
 .link {
