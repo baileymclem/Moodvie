@@ -206,6 +206,7 @@ $(".btn2").on("click", function (event) {
       var movieLi = $("<li>");
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
+      radioInput.setAttribute('name', 'choice');
       $(movieLi).append(romResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
@@ -234,6 +235,7 @@ $(".btn3").on("click", function (event) {
       var movieLi = $("<li>");
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
+      radioInput.setAttribute('name', 'choice');
       $(movieLi).append(horResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
@@ -262,6 +264,7 @@ $(".btn1").on("click", function (event) {
       var movieLi = $("<li>");
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
+      radioInput.setAttribute('name', 'choice');
       $(movieLi).append(comResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
@@ -287,10 +290,10 @@ $(".btn4").on("click", function (event) {
   }).then(function (response) {
     for (i = 0; i < 10;) {
       var actResults = response.results[i].title.split();
-
       var movieLi = $("<li>");
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
+      radioInput.setAttribute('name', 'choice');
       $(movieLi).append(actResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
