@@ -25,14 +25,28 @@ html {
     color: black;
 }
 
+#start-btn2 {
+    position: bottom;
+    bottom: 0;
+}
+
 .link {
     color: black;
 }
 
 .image {
     padding: 1px;
-
 }
-/* .column {
-    width: 25%;
-} */
+#image1 {
+    float: right ;
+}
+#image2 {
+    float: right;
+}
+#image3 {
+    float: right;
+}
+#image4 {
+    float: right;
+}
+ 
