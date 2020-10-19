@@ -35,15 +35,19 @@ html {
     padding: 1px;
 }
 #image1 {
-    float: right ;
+    /* float: right ; */
+    padding: 2px;
 }
 #image2 {
-    float: right;
+    /* float: right; */
+    padding: 2px;
 }
 #image3 {
-    float: right;
+    /* float: right; */
+    padding: 2px;
 }
 #image4 {
-    float: right;
+    /* float: right; */
+    padding: 2px;
 }
  
