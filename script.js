@@ -186,6 +186,7 @@ $("#start-btn2").on("click", function () {
     });
 })
 
+//TMDB API
 $(".btn2").on("click", function (event) {
   console.log("I have been clicked");
   choicesContainerEl.classList.add("hide");
@@ -200,17 +201,16 @@ $(".btn2").on("click", function (event) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-
     for (i = 0; i < 10;) {
-      var movieLi = $("<li>");
       var romResults = response.results[i].title.split();
-      //console.log("results", romResults);
+      var movieLi = $("<li>");
+      var radioInput = document.createElement('input');
+      radioInput.setAttribute('type', 'radio');
       $(movieLi).append(romResults);
+      $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
       i++
     }
-    console.log("results", romResults);
-
   });
 
 })
@@ -229,15 +229,16 @@ $(".btn3").on("click", function (event) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-
     for (i = 0; i < 10;) {
-      var movieLi = $("<li>");
       var horResults = response.results[i].title.split();
+      var movieLi = $("<li>");
+      var radioInput = document.createElement('input');
+      radioInput.setAttribute('type', 'radio');
       $(movieLi).append(horResults);
+      $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
       i++
     }
-
   });
 
 })
@@ -256,15 +257,16 @@ $(".btn1").on("click", function (event) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-
     for (i = 0; i < 10;) {
-      var movieLi = $("<li>");
       var comResults = response.results[i].title.split();
+      var movieLi = $("<li>");
+      var radioInput = document.createElement('input');
+      radioInput.setAttribute('type', 'radio');
       $(movieLi).append(comResults);
+      $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
       i++
     }
-
   });
 
 })
@@ -283,20 +285,16 @@ $(".btn4").on("click", function (event) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-
     for (i = 0; i < 10;) {
-      var movieLi = $("<li>");
       var actResults = response.results[i].title.split();
-
-      var link = document.createElement('a');
-      link.href = 
-      link.click();
-
+      var movieLi = $("<li>");
+      var radioInput = document.createElement('input');
+      radioInput.setAttribute('type', 'radio');
       $(movieLi).append(actResults);
+      $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
       i++
     }
-
   });
 
 })
