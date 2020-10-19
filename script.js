@@ -302,3 +302,17 @@ $(".btn4").on("click", function (event) {
   });
 
 })
+
+const movieListBtn = document.querySelector('#movie-btn');
+// handle click button
+movieListBtn.onclick = function () {
+    const rbs = document.querySelectorAll('input[name="choice"]');
+    let selectedValue;
+    for (const rb of rbs) {
+        if (rb.checked) {
+            selectedValue = rb.value;
+            break;
+        }
+    }
+    alert(selectedValue);
+};
