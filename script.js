@@ -287,6 +287,7 @@ $(".btn4").on("click", function (event) {
   }).then(function (response) {
     for (i = 0; i < 10;) {
       var actResults = response.results[i].title.split();
+
       var movieLi = $("<li>");
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
