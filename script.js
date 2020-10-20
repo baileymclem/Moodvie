@@ -15,11 +15,6 @@ startBtnEl.addEventListener("click", function (event) {
 
 movieBtnEl.addEventListener("click", function (event) {
   listContainerEl.classList.add("hide");
-  trailerContainerEl.classList.remove("hide");
-});
-
-backBtnEl.addEventListener("click", function (event) {
-  trailerContainerEl.classList.add("hide");
   choicesContainerEl.classList.remove("hide");
   $("ul").empty();
 });
