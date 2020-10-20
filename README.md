@@ -1,6 +1,6 @@
 # Moodvie: The Movie Generator 
 * You can take a look at the [project page](https://github.com/lincguo93/Moodvie)
-* View the [deployed GitHub page]()
+* View the [deployed GitHub page](https://lincguo93.github.io/Moodvie/)
 
 ## Table of Contents
 * Project Overview
@@ -18,14 +18,14 @@ The purpose of this project is to create a movie generating application (Moodvie
 
 User Story:
 
-AS a person during quarantine
-I WANT to kill time
-SO I want to watch a movie
-GIVEN I'm using the app
-WHEN I open the app
-THEN the app loads
-WHEN I input MY MOODS 
-THEN it provides the suggested movies
+AS a person during quarantine <br />
+I WANT to kill time <br />
+SO I want to watch a movie <br />
+GIVEN I'm using the app <br />
+WHEN I open the app <br />
+THEN the app loads <br />
+WHEN I input MY MOODS <br />
+THEN it provides the suggested movies <br />
 WHEN I select a movie, it gives me a description so I can make my choice
 
 
@@ -45,7 +45,7 @@ Some of the issues we ran into while creating this application:
 
 
 
-[Moodvie Demo](moodviegif.gif) 
+![Moodvie Demo](moodviegif.gif)
 
 
 ## License 
