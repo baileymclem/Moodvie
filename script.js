@@ -10,14 +10,11 @@ var emojiBtnEl = document.querySelector("#start-btn2");
 var movieBtnEl = document.querySelector("#movie-btn");
 var backBtnEl = document.querySelector("#back-btn");
 
-
 //Events
 startBtnEl.addEventListener("click", function (event) {
   introContainerEl.classList.add("hide");
   choicesContainerEl.classList.remove("hide");
 });
-
-
 
 movieBtnEl.addEventListener("click", function (event) {
   listContainerEl.classList.add("hide");
@@ -27,6 +24,7 @@ movieBtnEl.addEventListener("click", function (event) {
 backBtnEl.addEventListener("click", function (event) {
   trailerContainerEl.classList.add("hide");
   choicesContainerEl.classList.remove("hide");
+  $("ul").empty();
 });
 
 var Image1 = $("<img>");
@@ -35,16 +33,19 @@ var Image3 = $("<img>");
 var Image4 = $("<img>");
 
 $("#start-btn1").on("click", function () {
-
   //api endpoint url with api key
-  var queryURL1 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
-  var queryURL2 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=crying";
-  var queryURL3 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=scary";
-  var queryURL4 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=superhero";
+  var queryURL1 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
+  var queryURL2 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=crying";
+  var queryURL3 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=scary";
+  var queryURL4 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=superhero";
   //make a request to a remote server by using jqury .ajax
   $.ajax({
     url: queryURL1,
-    method: "GET" //http method 
+    method: "GET", //http method
   })
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
@@ -61,7 +62,7 @@ $("#start-btn1").on("click", function () {
     });
   $.ajax({
     url: queryURL2,
-    method: "GET" //http method 
+    method: "GET", //http method
   })
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
@@ -77,45 +78,46 @@ $("#start-btn1").on("click", function () {
     });
   $.ajax({
     url: queryURL3,
-    method: "GET" //http method 
-  })
-    .then(function (response) {
-      //get the image url from the response
-      var imageUrl = response.data.fixed_width_small_url;
-      //creating a new image element
-      //applying the data from the server to make the image in html
-      Image3.attr("src", imageUrl);
-      Image3.attr("alt", "moviegif3");
-      Image3.attr("id", "btn");
-      //prepends new img to the HTML
-      $("#image3").prepend(Image3);
-    });
+    method: "GET", //http method
+  }).then(function (response) {
+    //get the image url from the response
+    var imageUrl = response.data.fixed_width_small_url;
+    //creating a new image element
+    //applying the data from the server to make the image in html
+    Image3.attr("src", imageUrl);
+    Image3.attr("alt", "moviegif3");
+    Image3.attr("id", "btn");
+    //prepends new img to the HTML
+    $("#image3").prepend(Image3);
+  });
   $.ajax({
     url: queryURL4,
-    method: "GET" //http method 
-  })
-    .then(function (response) {
-      //get the image url from the response
-      var imageUrl = response.data.fixed_width_small_url;
-      //creating a new image element
-      //applying the data from the server to make the image in html
-      Image4.attr("src", imageUrl);
-      Image4.attr("alt", "moviegif4");
-      Image4.attr("id", "btn");
-      //prepends new img to the HTML
-      $("#image4").prepend(Image4);
-    });
-
+    method: "GET", //http method
+  }).then(function (response) {
+    //get the image url from the response
+    var imageUrl = response.data.fixed_width_small_url;
+    //creating a new image element
+    //applying the data from the server to make the image in html
+    Image4.attr("src", imageUrl);
+    Image4.attr("alt", "moviegif4");
+    Image4.attr("id", "btn");
+    //prepends new img to the HTML
+    $("#image4").prepend(Image4);
+  });
 });
 
 $("#start-btn2").on("click", function () {
-  var queryURL1 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
-  var queryURL2 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=crying";
-  var queryURL3 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=scary";
-  var queryURL4 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=superhero";
+  var queryURL1 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
+  var queryURL2 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=crying";
+  var queryURL3 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=scary";
+  var queryURL4 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=superhero";
   $.ajax({
     url: queryURL1,
-    method: "GET" //http method 
+    method: "GET", //http method
   })
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
@@ -133,7 +135,7 @@ $("#start-btn2").on("click", function () {
 
   $.ajax({
     url: queryURL2,
-    method: "GET" //http method 
+    method: "GET", //http method
   })
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
@@ -151,7 +153,7 @@ $("#start-btn2").on("click", function () {
 
   $.ajax({
     url: queryURL3,
-    method: "GET" //http method 
+    method: "GET", //http method
   })
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
@@ -169,7 +171,7 @@ $("#start-btn2").on("click", function () {
 
   $.ajax({
     url: queryURL4,
-    method: "GET" //http method 
+    method: "GET", //http method
   })
     //handling the response, as a javascript object (this is where the "call back" happen)
     .then(function (response) {
@@ -184,135 +186,141 @@ $("#start-btn2").on("click", function () {
       //prepends new img to the HTML
       $("#image4").prepend(Image4);
     });
-})
+});
 
 //TMDB API
 $(".btn2").on("click", function (event) {
   console.log("I have been clicked");
   choicesContainerEl.classList.add("hide");
   listContainerEl.classList.remove("hide");
-  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+  var apiKey = "44edc45cf343e4f63c0b65f4586bf3a6";
 
-  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&api_key=" + apiKey;
-
-
+  var queryURL =
+    "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&api_key=" +
+    apiKey;
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
-    for (i = 0; i < 10;) {
+    for (i = 0; i < 10; ) {
       var romResults = response.results[i].title.split();
       var movieLi = $("<li>");
-      var radioInput = document.createElement('input');
-      radioInput.setAttribute('type', 'radio');
-      radioInput.setAttribute('name', 'choice');
+      var radioInput = document.createElement("input");
+      radioInput.setAttribute("type", "radio");
+      radioInput.setAttribute("name", "choice");
       $(movieLi).append(romResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
-      i++
+      i++;
     }
   });
-
-})
+});
 
 $(".btn3").on("click", function (event) {
   console.log("I have been clicked");
   choicesContainerEl.classList.add("hide");
   listContainerEl.classList.remove("hide");
-  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+  var apiKey = "44edc45cf343e4f63c0b65f4586bf3a6";
 
-  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" + apiKey;
-
-
+  var queryURL =
+    "https://api.themoviedb.org/3/discover/movie?with_genres=27&sort_by=popularity.desc&api_key=" +
+    apiKey;
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
-    for (i = 0; i < 10;) {
+    for (i = 0; i < 10; ) {
       var horResults = response.results[i].title.split();
       var movieLi = $("<li>");
-      var radioInput = document.createElement('input');
-      radioInput.setAttribute('type', 'radio');
-      radioInput.setAttribute('name', 'choice');
+      var radioInput = document.createElement("input");
+      radioInput.setAttribute("type", "radio");
+      radioInput.setAttribute("name", "choice");
       $(movieLi).append(horResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
-      i++
+      i++;
     }
   });
-
-})
+});
 
 $(".btn1").on("click", function (event) {
   console.log("I have been clicked");
   choicesContainerEl.classList.add("hide");
   listContainerEl.classList.remove("hide");
-  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+  var apiKey = "44edc45cf343e4f63c0b65f4586bf3a6";
 
-  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=35&sort_by=popularity.desc&api_key=" + apiKey;
-
-
+  var queryURL =
+    "https://api.themoviedb.org/3/discover/movie?with_genres=35&sort_by=popularity.desc&api_key=" +
+    apiKey;
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
-    for (i = 0; i < 10;) {
+    for (i = 0; i < 10; ) {
       var comResults = response.results[i].title.split();
       var movieLi = $("<li>");
-      var radioInput = document.createElement('input');
-      radioInput.setAttribute('type', 'radio');
-      radioInput.setAttribute('name', 'choice');
+      var radioInput = document.createElement("input");
+      radioInput.setAttribute("type", "radio");
+      radioInput.setAttribute("name", "choice");
       $(movieLi).append(comResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
-      i++
+      i++;
     }
   });
+});
 
-})
-
+var action =
 $(".btn4").on("click", function (event) {
   console.log("I have been clicked");
   choicesContainerEl.classList.add("hide");
   listContainerEl.classList.remove("hide");
-  var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
+  var apiKey = "44edc45cf343e4f63c0b65f4586bf3a6";
 
-  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=28&sort_by=popularity.desc&api_key=" + apiKey;
-
-
+  var queryURL =
+    "https://api.themoviedb.org/3/discover/movie?with_genres=28&sort_by=popularity.desc&api_key=" +
+    apiKey;
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
-    for (i = 0; i < 10;) {
+    for (i = 0; i < 10; ) {
       var actResults = response.results[i].title.split();
       var movieLi = $("<li>");
-      var radioInput = document.createElement('input');
-      radioInput.setAttribute('type', 'radio');
-      radioInput.setAttribute('name', 'choice');
+      var radioInput = document.createElement("input");
+      radioInput.setAttribute("type", "radio");
+      radioInput.setAttribute("name", "choice");
       $(movieLi).append(actResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
-      i++
+      i++;
+
+      var actList = JSON.parse(JSON.stringify(actResults));
+      console.log('act results', actList[0]);
+      
+
+      
+
     }
+
   });
+});
 
-})
 
-const movieListBtn = document.querySelector('#movie-btn');
+
+const movieListBtn = document.querySelector("#movie-btn");
 // handle click button
 movieListBtn.onclick = function () {
-    const rbs = document.querySelectorAll('input[name="choice"]');
-    let selectedValue;
-    for (const rb of rbs) {
-        if (rb.checked) {
-            selectedValue = rb.value;
-            break;
-        }
+  const rbs = document.querySelectorAll('input[name="choice"]');
+  let selectedValue;
+  for (const rb of rbs) {
+    if (rb.checked) {
+      selectedValue = rb.value;
+      break;
     }
-    alert(selectedValue);
+  }
 };
