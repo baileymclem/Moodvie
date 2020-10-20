@@ -45,7 +45,7 @@ Some of the issues we ran into while creating this application:
 
 
 
-<!--Update this code once the GIF is created ![Password Generator Demo](./Assets/passwordgenerator.gif) -->
+[Moodvie Demo](moodviegif.gif) 
 
 
 ## License 
