@@ -29,6 +29,7 @@ THEN it provides the suggested movies <br />
 WHEN I select a movie, it gives me a description so I can make my choice
 
 
+![Moodvie Demo](moodviegif.gif)
 
 ## Frameworks
 Bulma, JavaScript 
@@ -45,7 +46,7 @@ Some of the issues we ran into while creating this application:
 
 
 
-![Moodvie Demo](moodviegif.gif)
+
 
 
 ## License 
