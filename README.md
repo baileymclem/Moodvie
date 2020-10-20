@@ -16,7 +16,7 @@ The purpose of this project is to create a movie generating application (Moodvie
 * TMDB for the movies
 * GIPHY for the selectable GIFs
 
-User Story 
+User Story:
 
 AS a person during quarantine
 I WANT to kill time
