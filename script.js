@@ -27,6 +27,7 @@ movieBtnEl.addEventListener("click", function (event) {
 backBtnEl.addEventListener("click", function (event) {
   trailerContainerEl.classList.add("hide");
   choicesContainerEl.classList.remove("hide");
+  $("ul").empty();
 });
 
 var Image1 = $("<img>");
