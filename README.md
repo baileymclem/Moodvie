@@ -26,6 +26,7 @@ WHEN I open the app
 THEN the app loads
 WHEN I input MY MOODS 
 THEN it provides the suggested movies
+WHEN I select a movie, it gives me a description so I can make my choice
 
 
 
