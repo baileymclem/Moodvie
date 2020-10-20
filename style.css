@@ -1,0 +1,54 @@
+html { 
+    background: url(popcorn.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.section {
+    margin: 10%;
+    text-align: center;
+    
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    font-family: 'Paytone One', sans-serif;
+}
+
+.subtitle {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px; 
+    color: black;
+}
+
+.link {
+    color: black;
+}
+
+.image {
+    padding: 1px;
+}
+#image1 {
+ 
+    padding: 2px;
+}
+#image2 {
+ 
+    padding: 2px;
+}
+#image3 {
+
+    padding: 2px;
+}
+#image4 {
+   
+    padding: 2px;
+}
+ 
+#movie-list {
+    font-size: x-large;
+}
