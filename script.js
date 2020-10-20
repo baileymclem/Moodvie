@@ -27,6 +27,7 @@ movieBtnEl.addEventListener("click", function (event) {
 backBtnEl.addEventListener("click", function (event) {
   trailerContainerEl.classList.add("hide");
   choicesContainerEl.classList.remove("hide");
+  $("ul").empty();
 });
 
 var Image1 = $("<img>");
@@ -193,7 +194,7 @@ $(".btn2").on("click", function (event) {
   listContainerEl.classList.remove("hide");
   var apiKey = '44edc45cf343e4f63c0b65f4586bf3a6';
 
-  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&api_key=" + apiKey;
+  var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=10749&sort_by=popularity.desc&include_image_language=en,null&api_key=" + apiKey;
 
 
 
@@ -204,14 +205,17 @@ $(".btn2").on("click", function (event) {
     for (i = 0; i < 10;) {
       var romResults = response.results[i].title.split();
       var movieLi = $("<li>");
+      var posterTag = $("<img />", {src : "https://image.tmdb.org/t/p/w200" + response.results[i].poster_path});
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
       radioInput.setAttribute('name', 'choice');
       $(movieLi).append(romResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
+      $(movieLi).append(posterTag);
       i++
     }
+    console.log(response);
   });
 
 })
@@ -230,15 +234,18 @@ $(".btn3").on("click", function (event) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
+    
     for (i = 0; i < 10;) {
       var horResults = response.results[i].title.split();
       var movieLi = $("<li>");
+      var posterTag = $("<img />", {src : "https://image.tmdb.org/t/p/w200" + response.results[i].poster_path});
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
       radioInput.setAttribute('name', 'choice');
       $(movieLi).append(horResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
+      $(movieLi).append(posterTag);
       i++
     }
   });
@@ -262,12 +269,14 @@ $(".btn1").on("click", function (event) {
     for (i = 0; i < 10;) {
       var comResults = response.results[i].title.split();
       var movieLi = $("<li>");
+      var posterTag = $("<img />", {src : "https://image.tmdb.org/t/p/w200" + response.results[i].poster_path});
       var radioInput = document.createElement('input');
       radioInput.setAttribute('type', 'radio');
       radioInput.setAttribute('name', 'choice');
       $(movieLi).append(comResults);
       $(movieLi).prepend(radioInput);
       $("#movie-list").prepend(movieLi);
+      $(movieLi).append(posterTag);
       i++
     }
   });
@@ -289,16 +298,24 @@ $(".btn4").on("click", function (event) {
     method: "GET"
   }).then(function (response) {
     for (i = 0; i < 10;) {
-      var actResults = response.results[i].title.split();
+      var MovieOverView = response.results[i].overview;
       var movieLi = $("<li>");
-      var radioInput = document.createElement('input');
-      radioInput.setAttribute('type', 'radio');
-      radioInput.setAttribute('name', 'choice');
-      $(movieLi).append(actResults);
-      $(movieLi).prepend(radioInput);
+      var posterTag = $("<img />", {src : "https://image.tmdb.org/t/p/w200" + response.results[i].poster_path});
+      $(posterTag).addClass("finalBtn")
+      var MOV = $("<p>");
+      $(MOV).addClass("hide");
       $("#movie-list").prepend(movieLi);
+      $(movieLi).append(posterTag);
+      $(MOV).append(MovieOverView);
+      $(movieLi).append(MOV);
       i++
     }
+    $(".finalBtn").on("click", function (event) {
+      console.log("I have been clicked");
+      MOV.removeClass("hide");
+    });
+
   });
+
 
 })
