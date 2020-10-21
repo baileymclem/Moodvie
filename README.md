@@ -1,4 +1,6 @@
 # Moodvie: The Movie Generator 
+
+Moodvie is a movie suggestion generator that allows someone in quarantine to find a movie suggestion based on GIF's/moods.
 * You can take a look at the [project page](https://github.com/lincguo93/Moodvie)
 * View the [deployed GitHub page](https://lincguo93.github.io/Moodvie/)
 
