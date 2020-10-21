@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Moodvie</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-</head>
 
-<body>
+  </head>
+
+  <body>
     <section class="hero is-danger is-mobile">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    <a class="link" href="index.html">MOODVIE</a>
-                </h1>
-                <h2 class="subtitle">
-                    What's Your Moodvie?
-                </h2>
-            </div>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            <a class="link" href="Moodie.html">MOODVIE</a>
+          </h1>
+          <h2 class="subtitle">What's Your Moodvie?</h2>
         </div>
+      </div>
     </section>
+
+    <div class="container">
+      <section class="section" style="background-color: white" id="intro">
+        <div class="column is-10-desktop is-offset-1 is-centered">
+          <h1 class="title">Welcome to Moodvie!</h1>
+          <p>
+            Hey there! How are you today? How are you feeling? Need to Netflix
+            and chill or Hulu and Woohoo but can't be bothered with the
+            never-ending scrolling through choices? We understand, it can be
+            overwhelming, there's a lot of options out there. Moodvie is here to
+            help. We'll help you find something to watch that's a mood.
+          </p>
+          <p>It'll be great. You'll love it.</p>
+          <br /><br />
+          <button class="button is-danger is-focused" id="start-btn1">
+            What's Your Moodvie?
+          </button>
+        </div>
+      </section>
 
 
     <div class="container">
-
-        <section class="section" style="background-color: white;" id="intro">
-            <div class="column  is-10-desktop is-offset-1 is-centered">
-                <h1 class="title">Welcome to Moodvie!</h1>
-                <p>Hey there! How are you today? How are you feeling? Need to find something new to watch but are
-                    overwhelmed by all the choices? Do you want to stop endlessly scrolling through options that don't
-                    appeal to you? We're guessing you do and Moodvie is here to help. We'll help you find something to
-                    watch that's fits your mood. </p>
-                <p>It'll be great. You'll love it. </p>
-                <br /><br />
-                <button class="button is-danger is-focused" id="start-btn1">What's Your Moodvie?</button>
-            </div>
-        </section>
         <section class="section hide" style="background-color: white;" id="choices">
             <div class="column  is-10-desktop is-offset-1 is-centered">
 
@@ -69,6 +75,17 @@
                 <br /><br />
                 <button class="button is-danger is-focused" id="movie-btn">Start Over</button>
 
+            </div>
+        </section>
+
+        <section class="section hide" style="background-color: white;" id="trailer">
+            <div class="column  is-10-desktop  is-offset-1  is-centered">
+                <h1 class="title">The Movie Mood</h1>
+                <div>
+                    Give me the synopsis
+                </div>
+                <br />
+                <button class="button is-danger is-focused" id="back-btn">Start Over</button>
             </div>
         </section>
 

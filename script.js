@@ -77,10 +77,14 @@ $("#start-btn1").on("click", function () {
 });
 
 $("#start-btn2").on("click", function () {
-  var queryURL1 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
-  var queryURL2 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=crying";
-  var queryURL3 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=scary";
-  var queryURL4 = "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=superhero";
+  var queryURL1 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=laughing";
+  var queryURL2 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=crying";
+  var queryURL3 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=scary";
+  var queryURL4 =
+    "https://api.giphy.com/v1/gifs/random?api_key=EueWF2584Ii51v40fdtdqwa5tJhtBv7c&tag=superhero";
   $.ajax({
     url: queryURL1,
     method: "GET"
@@ -128,7 +132,7 @@ $("#start-btn2").on("click", function () {
       Image4.attr("id", "btn");
       $("#image4").prepend(Image4);
     });
-})
+});
 
 $(".btn2").on("click", function (event) {
   choicesContainerEl.classList.add("hide");
@@ -138,7 +142,7 @@ $(".btn2").on("click", function (event) {
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
     for (i = 0; i < 10;) {
       var MovieOverView = response.results[i].overview;
@@ -167,7 +171,7 @@ $(".btn3").on("click", function (event) {
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
     for (i = 0; i < 10;) {
       var MovieOverView = response.results[i].overview;
@@ -196,7 +200,7 @@ $(".btn1").on("click", function (event) {
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
     for (i = 0; i < 10;) {
       var MovieOverView = response.results[i].overview;
@@ -225,7 +229,7 @@ $(".btn4").on("click", function (event) {
 
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
   }).then(function (response) {
     for (i = 0; i < 10;) {
       var MovieOverView = response.results[i].overview;
