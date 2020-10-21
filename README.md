@@ -1,5 +1,6 @@
 # Moodvie: The Movie Generator 
 
+
 Moodvie is a movie suggestion generator that allows someone in quarantine to find a movie suggestion based on GIF's/moods.
 * You can take a look at the [project page](https://github.com/lincguo93/Moodvie)
 * View the [deployed GitHub page](https://lincguo93.github.io/Moodvie/)
@@ -18,7 +19,7 @@ The purpose of this project is to create a movie generating application (Moodvie
 * TMDB for the movies
 * GIPHY for the selectable GIFs
 
-User Story:
+## User Story
 
 AS a person during quarantine <br />
 I WANT to kill time <br />
@@ -33,9 +34,11 @@ WHEN I select a movie, it gives me a description so I can make my choice
 
 ![Moodvie Demo](moodviegif.gif)
 
+
 ## Frameworks
 * Bulma
-* jQuery 
+* jQuery
+
 
 ## Issues 
 
@@ -57,6 +60,9 @@ Some of the issues we ran into while creating this application:
 * Footbar emojis that links to seasonal suggested movies
 
 
+
+
+
 ## License 
 None at this time
 
@@ -65,3 +71,5 @@ None at this time
 * Daoyuan Guo  [@lincguo93](https://github.com/ndelaire)
 * Bailey Clemons  [@baileymclem](https://github.com/ndelaire)
 * Awa Olweny  [@francisawa](https://github.com/francisawa)
+
+## Contact
