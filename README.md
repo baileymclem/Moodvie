@@ -43,13 +43,18 @@ Some of the issues we ran into while creating this application:
 * Using Bulma as a CSS framework 
     * It was not as user friendly as we hoped, there were some struggles trying to figure how to make it work and make it responsive
 * Originally we were going to use an emoji API but we quickly found that because of the wide range of them, it was difficult to connect them to a genre
+* We had trouble pulling from the dynamically created list of movies on the third page and moving a selected movie to the fourth page. This would be something we would look into more in the future. 
 
 ## Future Version 
 
-
-
-
-
+* Fourth page with more movie details and a viewable trailer
+* More Mood options to choose from
+* The ability to select multiple genres at once
+* Option to output different/random list of selected genre of movies
+* User pick filter
+* Use of search option
+* Easier & quicker shortcut buttons for user to navigate throughout all pages
+* Footbar emojis that links to seasonal suggested movies
 
 
 ## License 
