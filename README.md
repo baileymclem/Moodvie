@@ -32,7 +32,8 @@ WHEN I select a movie, it gives me a description so I can make my choice
 ![Moodvie Demo](moodviegif.gif)
 
 ## Frameworks
-Bulma, JavaScript 
+* Bulma
+* jQuery 
 
 ## Issues 
 
@@ -52,4 +53,8 @@ Some of the issues we ran into while creating this application:
 ## License 
 None at this time
 
-## Contact
+## Contributors
+* Nadine Delaire [@ndelaire](https://github.com/ndelaire)
+* Daoyuan Guo  [@lincguo93](https://github.com/ndelaire)
+* Bailey Clemons  [@baileymclem](https://github.com/ndelaire)
+* Awa Olweny  [@francisawa](https://github.com/francisawa)
